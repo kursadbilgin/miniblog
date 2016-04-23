@@ -16,8 +16,9 @@
   * [Read Docs](https://virtualenv.pypa.io/en/latest/)
 
 * DJANGO
-  * [Orijinal Document](https://www.djangoproject.com/)
   * [Source Code](https://github.com/django/django)
+  * [Orijinal Document](https://www.djangoproject.com/)
+  * [Django Packages](https://www.djangopackages.com/)
 
 # 1. Ders Kısa Özet
 
