@@ -23,7 +23,7 @@
 # 1. Ders Kısa Özet
 
 * İlk önce pip kurduk. Kurulum PIP linkinde mevcut.
-  1. sudo apt-get instal python-pip
+  1. sudo apt-get install python-pip
   2. get-pip.py dosyasını indir. python get-pip.py ile çalıştır.
 
 * Daha Sonra virtualenv kurduk.
