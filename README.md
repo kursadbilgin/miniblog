@@ -3,7 +3,7 @@
 ## LINK
 
 * TEXT EDITOR
-  * [Atom]( https://www.youtube.com/watch?v=fJW65Wo7IHI&list=PLGLfVvz_LVvS5P7khyR4xDp7T9lCk9PgE)
+  * [Atom](https://atom.io/)
   * [Sublime Text](https://www.sublimetext.com/) 
 
 * IDE
