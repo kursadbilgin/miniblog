@@ -20,7 +20,7 @@
   * [Orijinal Document](https://www.djangoproject.com/)
   * [Django Packages](https://www.djangopackages.com/)
 
-# 1. Ders Kısa Özet
+# 1. Ders Özet
 
 * İlk önce pip kurduk. Kurulum PIP linkinde mevcut.
   1. sudo apt-get install python-pip
@@ -49,3 +49,28 @@
 * Son olarak super kullanıcı oluşturduk ve admin panelini inceledik.
   1. python manage.py createsuperuser, ./manage.py createsuperuser
   2. Tarayıcıdan localhost:8080/admin/ adresine giderek admin panelini inceledik.
+
+
+# 2. Ders Özet
+
+* Blog app'ini oluşturduk. Modelimizi yazdık.
+  1. ./manage.py startapp blog
+  2. 'blog' INSTALLED_APP'e ekledi.
+  3. ./manage.py makemigrations blog
+  4. ./manage.py migrate
+  5. ./manage.py migrate --list (Tüm migrate dosyalarını ve durumlarını gösterir.)
+
+* Modelde değişiklik yaptık ve migrate roll back nasıl yapılır gördük.
+ 1. ./manage.py migrate 0001, ./manage.py migrate zero (0001'e kadar olan yada tamamının aktifliğini kaldırdık.)
+ 2. Aktifliğini kaldırdığımız migrate dosyalarını sildik.
+ 3. Tekrar ./manage.py makemigrations blog
+ 4. ./manage.py migrate blog
+
+* Admin panelini değiştirdik.(Django Suit)
+ 1. [Django Suit Read Docs](https://django-suit.readthedocs.org/en/develop/)
+ 2. Kurulum ve yapılması gereken ayarların hepsi yukarıdaki linkte mevcut.
+
+* Views, Urls ve Template kısımlarını yazarak veri tabanından çektiğimiz blog yazılarını sayfada güncelden eskiye sıralı gösterdik.
+ 1. [Urls](https://docs.djangoproject.com/en/1.9/topics/http/urls/)
+ 2. [Templates](http://www.djangobook.com/en/2.0/chapter04.html)
+ 3. [TemplateView](https://docs.djangoproject.com/en/1.9/topics/class-based-views/#simple-usage-in-your-urlconf)
