@@ -31,12 +31,22 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+
+    # Django Suit Admin
+    'suit',
+
+    # Native Application
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Internal Applications
+    'blog',
+
+    # External Applications
 )
 
 MIDDLEWARE_CLASSES = (
@@ -55,7 +65,7 @@ ROOT_URLCONF = 'miniblog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -63,6 +73,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.core.context_processors.request'
             ],
         },
     },
@@ -81,11 +92,16 @@ DATABASES = {
     }
 }
 
+# Django Admin Customize
+SUIT_CONFIG = {
+    'ADMIN_NAME': 'Kenan Blog'
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'tr-TR'
+LANGUAGE_CODE = 'en-US'
 
 TIME_ZONE = 'Europe/Istanbul'
 
