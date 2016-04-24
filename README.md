@@ -79,3 +79,4 @@
  1. pip freeze (virtualenv'de yada sistemde(hangisi aktifse) kurulu pip paketlerini gösterir.)
  2. pip freeze > requirements.txt (pip paketlerini dosyaya yazar.)
  3. pip install -r requirements.txt  (Dosyada yazılı pip paketlerini kurar.)
+ 4. [pip freeze](https://pip.pypa.io/en/stable/reference/pip_freeze/)
