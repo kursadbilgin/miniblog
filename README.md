@@ -4,12 +4,12 @@
 
 * TEXT EDITOR
   * [Atom](https://atom.io/)
-  * [Sublime Text](https://www.sublimetext.com/) 
+  * [Sublime Text](https://www.sublimetext.com/)
 
 * IDE
   * [Pycharm](https://www.jetbrains.com/pycharm/download/#section=linux)
 
-* PIP 
+* PIP
   * [Read Docs](https://pip.pypa.io/en/stable/installing/)
 
 * VIRTUALENV
@@ -19,6 +19,11 @@
   * [Source Code](https://github.com/django/django)
   * [Orijinal Document](https://www.djangoproject.com/)
   * [Django Packages](https://www.djangopackages.com/)
+
+* GIT
+  * [Orijinal Document](https://git-scm.com/book/tr/v1)
+  * [Pull Request-1](https://yangsu.github.io/pull-request-tutorial/)
+  * [Pull Request-2](http://www.cangelis.com/git-ile-acik-kaynakli-projelere-katkida-bulunmak/)
 
 # 1. Ders Özet
 
