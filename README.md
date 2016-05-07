@@ -20,6 +20,9 @@
   * [Orijinal Document](https://www.djangoproject.com/)
   * [Django Packages](https://www.djangopackages.com/)
 
+* DJANGO PACKAGES
+  * [Django Ckeditor](https://github.com/django-ckeditor/django-ckeditor)
+
 * GIT
   * [Orijinal Document](https://git-scm.com/book/tr/v1)
   * [Pull Request-1](https://yangsu.github.io/pull-request-tutorial/)
