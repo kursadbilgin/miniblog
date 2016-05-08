@@ -14,13 +14,26 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.contrib.sitemaps.views import sitemap
 
 from blog.views import HomeView
+from blog.sitemaps import BlogSitemap, FirstBlogSitemap
 
-admin.autodiscover()
+sitemaps = {
+    'blogs': BlogSitemap()
+}
+
+sitemaps_first = {
+    'blog': FirstBlogSitemap()
+}
 
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'$', HomeView.as_view())
+    url(r'^$', HomeView.as_view()),
+    url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
+            name='django.contrib.sitemaps.views.sitemap'),
+    url(r'^firstsitemap\.xml$', sitemap, {'sitemaps': sitemaps_first},
+            name='django.contrib.sitemaps.views.sitemap'),
+    url(r'^robots.txt$', include('robots.urls')),
 ]

@@ -11,5 +11,8 @@ class Blog(models.Model):
         verbose_name="Blog"
         verbose_name_plural="Blogs"
 
+    def get_absolute_url(self):
+        pass
+
     def __str__(self):
         return self.title

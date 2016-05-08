@@ -42,11 +42,14 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
 
     # Internal Applications
     'blog',
 
     # External Applications
+    'robots',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -97,6 +100,7 @@ SUIT_CONFIG = {
     'ADMIN_NAME': 'Kenan Blog'
 }
 
+SITE_ID = 1
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
