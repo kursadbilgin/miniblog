@@ -1,0 +1,32 @@
+{% load i18n staticfiles %}
+
+<html>
+
+<head>
+  <title> Kenan Blog </title>
+
+  <link rel="stylesheet" href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" charset="utf-8">
+
+</head>
+
+<body>
+
+  {% if blogs %}
+    {% for blog in blogs %}
+      <div>
+        {{ blog.title }}<br>
+        {{ blog.content }}<br>
+        {{ blog.created_date }}
+      </div></br></br>
+    {% endfor %}
+  {% else %}
+    <h1> Çok yakında yazılarım sitede olacaktır. </h1>
+  {% endif %}
+
+  <a href="{% static 'images/loading.gif' %}">Tıkla</a>
+  <button class="btn btn-primary">aaa</button>
+  <img src="{% static 'images/loading.gif' %}"/>
+
+</body>
+
+</html>
