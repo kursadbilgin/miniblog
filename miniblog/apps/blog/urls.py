@@ -32,7 +32,5 @@ urlpatterns = [
     url(r'^blog/(?P<id>([0-9]+))?(/)?$', view=BlogView.as_view(), name='blog'),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
             name='django.contrib.sitemaps.views.sitemap'),
-    url(r'^firstsitemap\.xml$', sitemap, {'sitemaps': sitemaps_first},
-            name='django.contrib.sitemaps.views.sitemap'),
     url(r'^robots.txt$', include('robots.urls')),
 ]
