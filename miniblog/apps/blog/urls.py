@@ -16,21 +16,20 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 
-from blog.views import HomeView
-from blog.sitemaps import BlogSitemap, FirstBlogSitemap
+from blog.views import HomeView, BlogView
+from blog.sitemaps import BlogSitemap
 
 sitemaps = {
     'blogs': BlogSitemap()
 }
 
-sitemaps_first = {
-    'blog': FirstBlogSitemap()
-}
+admin.autodiscover()
 
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', HomeView.as_view(), name="index"),
+    url(r'^(?P<section>(about|blogs))?(/)?$', view=HomeView.as_view(), name="index"),
+    url(r'^blog/(?P<id>([0-9]+))?(/)?$', view=BlogView.as_view(), name='blog'),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
             name='django.contrib.sitemaps.views.sitemap'),
     url(r'^firstsitemap\.xml$', sitemap, {'sitemaps': sitemaps_first},

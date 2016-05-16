@@ -1,0 +1,55 @@
+{% extends 'index.html' %}
+
+{% load i18n staticfiles %}
+{% load blog_extra %}
+
+{% block title %} - Blogs {% endblock %}
+
+{% block info %}
+{% endblock %}
+
+{% block content %}
+	<main id="main">
+
+		<div class="container">
+			<div class="row topspace">
+				<div class="col-sm-8 col-sm-offset-2">
+
+				{% for blog in all_blogs %}
+	 				<article class="post">
+						<header class="entry-header">
+	 						<div class="entry-meta">
+	 							<span class="posted-on"><time class="entry-date published" date="2013-06-17">{{ blog.created_date|get_date }}</time></span>
+	 						</div>
+	 						<h1 class="entry-title"><a href="{% url 'blog' id=blog.id %}" rel="bookmark">{{ blog.title }}</a></h1>
+						</header>
+						<div class="entry-content">
+							{% comment %}
+							<p><img alt="" src="{% static 'images/mac.jpg' %}"></p>
+							{% endcomment %}
+							<p>{{ blog.content|content_split }}<a href="{% url 'blog' id=blog.id %}" class="more-link">Continue reading&#8230;</a></p>
+						</div>
+					</article><!-- #post-## -->
+				{% endfor %}
+
+
+			{% comment %}
+			<center class="">
+				<ul class="pagination">
+					<li class="disabled"><a href="">&laquo;</a></li>
+					<li class="active"><a href="">1</a></li>
+					<li><a href="">2</a></li>
+					<li><a href="">3</a></li>
+					<li><a href="">4</a></li>
+					<li><a href="">5</a></li>
+					<li><a href="">6</a></li>
+					<li><a href="">&raquo;</a></li>
+				</ul>
+			</center>
+			{% endcomment %}
+
+
+		</div>	<!-- /container -->
+
+	</main>
+{% endblock %}

@@ -8,19 +8,20 @@ class BlogAdmin(admin.ModelAdmin):
         (u'General', {
             'fields' : ('title',)
         }),
-        (u'Content', {
-            'fields' : ('content',)
+        (u'Content and Status', {
+            'fields' : ('is_important', 'content')
         }),
         (u'Date and Time', {
             'fields' : ('created_date', 'updated_date')
         }),
     )
 
-    list_display = ('title', 'content', 'created_date', 'updated_date')
-    list_filter = ('created_date', 'updated_date')
+    list_display = ('title', 'created_date', 'updated_date', 'is_important')
+    list_filter = ('is_important', 'created_date', 'updated_date')
     search_fields = ('title',)
     ordering = ('title',)
     readonly_fields = ('created_date', 'updated_date')
+
 
 admin.site.register(Blog, BlogAdmin)
 admin.site.unregister(Group)
