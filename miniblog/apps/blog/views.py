@@ -26,10 +26,7 @@ class HomeView(TemplateView):
 
         important_blogs = Blog.objects.filter(is_important=True)
         if not important_blogs:
-            important_blogs = Blog.objects.order_by('?').first()
-
-        print(important_blogs)
-
+            important_blogs = Blog.objects.order_by('?')[:6]
 
         context.update({
             'all_blogs': Blog.objects.all().order_by('-created_date'),
