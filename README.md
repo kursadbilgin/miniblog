@@ -88,3 +88,17 @@
  2. pip freeze > requirements.txt (pip paketlerini dosyaya yazar.)
  3. pip install -r requirements.txt  (Dosyada yazılı pip paketlerini kurar.)
  4. [Pip Freeze Read Docs](https://pip.pypa.io/en/stable/reference/pip_freeze/)
+
+
+# 3. Ders Özet
+* Sitemap ve Robot.txt eklendi.
+ * [Video](https://godjango.com/23-robots-and-sitemaps/)
+ * [Döküman](https://docs.djangoproject.com/en/1.9/ref/contrib/sites/)
+ * [Site matching query does not exist - 1](http://stackoverflow.com/questions/16068518/django-site-matching-query-does-not-exist)
+ * [Site matching query does not exist - 2](http://stackoverflow.com/questions/25468676/django-sites-model-what-is-and-why-is-site-id-1)
+
+# 4. Ders Özet
+* İnternetten bulunan bir tempalate siteye aktarıldı. TemplatesTag anlatıldı.
+ * [Templates](https://docs.djangoproject.com/ja/1.9/ref/templates/)
+ * [TemplatesTag - 1](https://docs.djangoproject.com/en/1.9/howto/custom-template-tags/)
+ * [TemplatesTag - 2](http://www.pfinn.net/custom-django-filter-tutorial.html)
