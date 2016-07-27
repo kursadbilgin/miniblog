@@ -107,7 +107,7 @@ DATABASES = {
 
 # Django Admin Customize
 SUIT_CONFIG = {
-    'ADMIN_NAME': 'Kenan Blog'
+    'ADMIN_NAME': 'Kürşad Blog'
 }
 
 SITE_ID = 1
